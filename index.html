@@ -1,14 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Whack a Mole</title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    
+  <link rel="stylesheet" href="/assets/index-5853ef34.css">
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <div class="info">
+        <h1>Whack a Mole Game</h1>
+        <h2>Whack 'em all!</h2>
+        <button class="button">START</button>
+    </div>
+
+    <div class="game">
+        <div class="hole" id="1">
+            <div class="hole-img"></div>
+            <div class="mole"></div>
+        </div>
+        <div class="hole" id="2">
+            <div class="hole-img"></div>
+            <div class="mole"></div>
+        </div>
+        <div class="hole" id="3">
+            <div class="hole-img"></div>
+            <div class="mole"></div>
+        </div>
+        <div class="hole" id="4">
+            <div class="hole-img"></div>
+            <div class="mole"></div>
+        </div>
+        <div class="hole" id="5">
+            <div class="hole-img"></div>
+            <div class="mole"></div>
+        </div>
+        <div class="hole" id="6">
+            <div class="hole-img"></div>
+            <div class="mole"></div>
+        </div>
+    </div>
+
+    <div class="score">0</div>
+    <script type="text/javascript" src="/src/js/index.js"></script>
 </body>
 
 </html>
